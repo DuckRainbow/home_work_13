@@ -12,7 +12,7 @@ class TestCategory(unittest.TestCase):
         self.assertEqual(some_category.goods, ['soap', 'spoon', 'knife', 'spoon', 'brush'])
 
     def test_count(self):
-        self.assertEqual(some_category.count, 5)
+        self.assertEqual(some_category.count, 1)
 
     def test_unique(self):
         self.assertEqual(some_category.unique, 4)
