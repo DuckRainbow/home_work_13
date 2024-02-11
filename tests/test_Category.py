@@ -16,10 +16,3 @@ class TestCategory(unittest.TestCase):
 
     def test_unique(self):
         self.assertEqual(some_category.unique, 4)
-
-    # def __init__(self, title, description, goods):
-    #     self.title = title
-    #     self.description = description
-    #     self.goods = goods
-    #     self.count = len(self.goods)
-    #     self.unique = len(set(self.goods))
