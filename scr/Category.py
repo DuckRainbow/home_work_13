@@ -19,9 +19,9 @@ class Category:
 
     @property
     def get_goods(self):
-        """ Print title, price and quantity of every product"""
+        """ Return title, price and quantity of every product"""
         for good in self.__goods:
-            print(f'{good.title}, {good.price} руб. Остаток: {good.quantity} шт.')
+            return f'{good.title}, {good.price} руб. Остаток: {good.quantity} шт.'
 
     @get_goods.setter
     def add_good(self, good):
