@@ -17,13 +17,17 @@ class Product:
         return new_product
 
     @property
-    def product_price(self):
+    def price(self):
         return self.__price
 
-    @product_price.setter
+    @price.setter
     def new_price(self, price):
         """ Set new price """
         if self.__price > price:
             unswer = input('New price is higher than old price. Confirm price change: enter yes(y) or no(n).')
             if unswer == 'y' or unswer == 'yes':
                 self.__price = price
+        elif price > 0:
+            self.__price = price
+        else:
+            print('Incorrect price')
