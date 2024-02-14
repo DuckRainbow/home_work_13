@@ -10,6 +10,7 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+
     @classmethod
     def create_product(cls, title, description, price, quantity):
         """ Create and return new product """
@@ -27,3 +28,6 @@ class Product:
             unswer = input('New price is higher than old price. Confirm price change: enter yes(y) or no(n).')
             if unswer == 'y' or unswer == 'yes':
                 self.__price = price
+
+    def __str__(self):
+        return f'{self.title}, {self.__price}. Remaining amount: {self.quantity} pcs.'

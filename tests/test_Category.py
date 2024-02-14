@@ -16,3 +16,9 @@ class TestCategory(unittest.TestCase):
 
     def test_unique(self):
         self.assertEqual(some_category.unique, 4)
+
+    def test_str(self):
+        self.assertEqual(str(some_category), 'home_apl, quantity of products: 5 pcs.')
+
+    def test_len(self):
+        self.assertEqual(len(some_category), 5)
