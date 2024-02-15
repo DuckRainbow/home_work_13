@@ -10,7 +10,6 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
-
     @classmethod
     def create_product(cls, title, description, price, quantity):
         """ Create and return new product """
@@ -18,10 +17,10 @@ class Product:
         return new_product
 
     @property
-    def product_price(self):
+    def price(self):
         return self.__price
 
-    @product_price.setter
+    @price.setter
     def new_price(self, price):
         """ Set new price """
         if self.__price > price:
@@ -31,3 +30,7 @@ class Product:
 
     def __str__(self):
         return f'{self.title}, {self.__price}. Remaining amount: {self.quantity} pcs.'
+
+    def __add__(self, other):
+        summ_ = self.price * self.quantity + other.price * other.quantity
+        return summ_

@@ -20,8 +20,10 @@ class Category:
     @property
     def goods(self):
         """ Return title, price and quantity of every product"""
+        list_goods = []
         for good in self.__goods:
-            return str(Product)
+            list_goods.append(str(Product))
+        return list_goods
 
     @ goods.setter
     def add_good(self, good):
