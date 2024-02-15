@@ -22,10 +22,10 @@ class Category:
         """ Return title, price and quantity of every product"""
         list_goods = []
         for good in self.__goods:
-            list_goods.append(str(Product))
+            list_goods.append(str(good))
         return list_goods
 
-    @ goods.setter
+    @goods.setter
     def add_good(self, good):
         """ Add product in list """
         self.__goods.append(good)
