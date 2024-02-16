@@ -1,13 +1,23 @@
 import unittest
 from scr.Product import Product
 
-some_product = Product('soap', 'soap for hands', 250, 15)
+some_product = Product('Soap', 'soap for hands', 50, 15)
+some_product_1 = Product('Spoon', 'spoon for soup', 120, 6)
 
 
 class TestCategory(unittest.TestCase):
 
     def test_init(self):
-        self.assertEqual(some_product.title, 'soap')
+        self.assertEqual(some_product.title, 'Soap')
         self.assertEqual(some_product.description, 'soap for hands')
-        self.assertEqual(some_product.price, 250)
+        self.assertEqual(some_product.get_price, 50)
         self.assertEqual(some_product.quantity, 15)
+
+    def test_create_product(self):
+        self.assertTrue(isinstance(Product.create_product('Soap', 'soap for hands', 50, 15), Product))
+
+    def test_str(self):
+        self.assertEqual(str(some_product), 'Soap, 50. Remaining amount: 15 pcs.')
+
+    def test_add(self):
+        self.assertEqual(some_product + some_product_1, 1470)
