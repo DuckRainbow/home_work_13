@@ -15,7 +15,7 @@ class Category:
         self.__goods = goods
 
         Category.count += 1
-        Category.unique += len(set(self.goods))
+        Category.unique += len(set(self.__goods))
 
     @property
     def goods(self):

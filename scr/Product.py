@@ -22,6 +22,7 @@ class Product:
 
     @get_price.setter
     def set_price(self, price):
+
         """ Set new price """
         if self.__price > price:
             unswer = input('New price is higher than old price. Confirm price change: enter yes(y) or no(n).')
