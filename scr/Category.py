@@ -31,7 +31,7 @@ class Category:
         self.__goods.append(good)
 
     def __str__(self):
-        return f'{self.title}, quantity of products: {len(self)} pcs.'
+        return f'{self.title}, количество продуктов: {len(self)} шт.'
 
     def __len__(self):
         self.length = len(self.__goods)

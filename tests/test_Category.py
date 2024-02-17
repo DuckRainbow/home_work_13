@@ -16,8 +16,8 @@ class TestCategory(unittest.TestCase):
         self.assertEqual(some_category.title, 'home_apl')
         self.assertEqual(some_category.description, 'some goods for home')
         self.assertEqual(some_category.goods,
-                         ['Soap, 50. Remaining amount: 15 pcs.', 'Spoon, 120. Remaining amount: 6 pcs.',
-                          'Knife, 150. Remaining amount: 4 pcs.', 'Brush, 100. Remaining amount: 12 pcs.'])
+                         ['Soap, 50руб. Остаток: 15 шт.', 'Spoon, 120руб. Остаток: 6 шт.',
+                          'Knife, 150руб. Остаток: 4 шт.', 'Brush, 100руб. Остаток: 12 шт.'])
 
     def test_count(self):
         self.assertEqual(some_category.count, 1)
@@ -26,7 +26,7 @@ class TestCategory(unittest.TestCase):
         self.assertEqual(some_category.unique, 4)
 
     def test_str(self):
-        self.assertEqual(str(some_category), 'home_apl, quantity of products: 4 pcs.')
+        self.assertEqual(str(some_category), 'home_apl, количество продуктов: 4 шт.')
 
     def test_len(self):
         self.assertEqual(len(some_category), 4)
