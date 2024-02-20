@@ -9,6 +9,12 @@ class Smartphone(Product):
         self.memory = memory
         self.color = color
 
+    def __add__(self, other):
+        if isinstance(other, Smartphone):
+            return super().__add__(self, other)
+
+        raise TypeError
+
 
 class LawnGrass(Product):
     def __init__(self, title, description, _price, quantity, country, growing_time, color):
@@ -16,3 +22,9 @@ class LawnGrass(Product):
         self.country = country
         self.growing_time = growing_time
         self.color = color
+
+    def __add__(self, other):
+        if isinstance(other, Smartphone):
+            return super().__add__(self, other)
+
+        raise TypeError 
