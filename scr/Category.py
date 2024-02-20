@@ -1,6 +1,7 @@
 from scr.Product import Product
 
 
+# noinspection PyPropertyDefinition
 class Category:
     title: str
     description: str
@@ -28,10 +29,13 @@ class Category:
     @goods.setter
     def add_good(self, good):
         """ Add product in list """
-        self.__goods.append(good)
+        if isinstance(good, Product):
+            self.__goods.append(good)
+        else:
+            raise TypeError
 
     def __str__(self):
-        return f'{self.title}, quantity of products: {len(self)} pcs.'
+        return f'{self.title}, количество продуктов: {len(self)} шт.'
 
     def __len__(self):
         self.length = len(self.__goods)
