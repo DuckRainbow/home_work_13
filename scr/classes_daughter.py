@@ -22,7 +22,7 @@ class LawnGrass(Product):
         self.growing_time = growing_time
 
     def __add__(self, other):
-        if isinstance(other, Smartphone):
+        if isinstance(other, LawnGrass):
             return super().__add__(self, other)
 
         raise TypeError 
