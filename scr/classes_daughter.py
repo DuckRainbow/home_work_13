@@ -1,8 +1,9 @@
 from scr.Product import Product
 from scr.base_abc_class import SomeProduct
+from scr.mixing_class import MixingLog
 
 
-class Smartphone(SomeProduct, Product):
+class Smartphone(SomeProduct, MixingLog, Product):
     def __init__(self, title, description, _price, quantity, performance, model, memory, color):
         super().__init__(title, description, _price, quantity, color)
         self.performance = performance
@@ -16,7 +17,7 @@ class Smartphone(SomeProduct, Product):
         raise TypeError
 
 
-class LawnGrass(SomeProduct, Product):
+class LawnGrass(SomeProduct, MixingLog, Product):
     def __init__(self, title, description, _price, quantity, country, growing_time, color):
         super().__init__(title, description, _price, quantity, color)
         self.country = country
