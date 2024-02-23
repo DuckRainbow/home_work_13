@@ -1,4 +1,8 @@
-class Product:
+from scr.base_abc_class import SomeProduct
+from scr.mixing_class import MixingLog
+
+
+class Product(SomeProduct, MixingLog):
     title: str
     description: str
     __price: float
