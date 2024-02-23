@@ -1,4 +1,7 @@
-class Product:
+from scr.base_abc_class import SomeProduct
+
+
+class Product(SomeProduct):
     title: str
     description: str
     __price: float
