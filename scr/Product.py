@@ -13,9 +13,9 @@ class Product:
         self.color = color
 
     @classmethod
-    def create_product(cls, title, description, _price, quantity):
+    def create_product(cls, title, description, _price, quantity, color):
         """ Create and return new product """
-        new_product = cls(title, description, _price, quantity)
+        new_product = cls(title, description, _price, quantity, color)
         return new_product
 
     @property
