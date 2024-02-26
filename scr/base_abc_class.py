@@ -8,5 +8,9 @@ class SomeProduct(ABC):
         pass
 
     @abstractmethod
+    def create_product(self):
+        pass
+
+    @abstractmethod
     def __add__(self):
         pass
