@@ -22,4 +22,3 @@ class TestCategory(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(some_product + some_product_1, 1470)
-
