@@ -2,7 +2,7 @@ from scr.base_abc_class import SomeProduct
 from scr.mixing_class import MixingLog
 
 
-class Product(SomeProduct, MixingLog):
+class Product(MixingLog, SomeProduct):
     title: str
     description: str
     __price: float
@@ -17,7 +17,7 @@ class Product(SomeProduct, MixingLog):
         self.color = color
 
     @classmethod
-    def create_product(cls, title, description, _price, quantity, color):
+    def create_product(cls):
         """ Create and return new product """
         new_product = cls(title, description, _price, quantity, color)
         return new_product
