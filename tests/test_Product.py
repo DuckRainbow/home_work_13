@@ -15,7 +15,7 @@ class TestCategory(unittest.TestCase):
         self.assertEqual(some_product.color, 'color')
 
     def test_create_product(self):
-        self.assertTrue(isinstance(Product.create_product('Soap', 'soap for hands', 50, 15), Product))
+        self.assertTrue(isinstance(Product.create_product('Soap', 'soap for hands', 50, 15, 'color'), Product))
 
     def test_str(self):
         self.assertEqual(str(some_product), 'Soap, 50руб. Остаток: 15 шт.')
