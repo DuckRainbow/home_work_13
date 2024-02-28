@@ -15,6 +15,7 @@ class Product(MixingLog, SomeProduct):
         self.__price = _price
         self.quantity = quantity
         self.color = color
+        super().__init__()
 
     @classmethod
     def create_product(cls, title, description, _price, quantity, color):
