@@ -8,8 +8,8 @@ spoon = Product('Spoon', 'spoon for soup', 120, 6, 'color')
 knife = Product('Knife', 'just knife', 150, 4, 'color')
 brush = Product('Brush', 'brush for cleaning smthng', 100, 12, 'color')
 smth = 'smth??'
-some_phone = Smartphone('title', 'description', '_price', 'quantity', 'performance', 'model', 'memory', 'color')
-just_grass = LawnGrass('title', 'description', '_price', 'quantity', 'country', 'growing_time', 'color')
+some_phone = Smartphone('title', 'description', '_price', 10, 'performance', 'model', 'memory', 'color')
+just_grass = LawnGrass('title', 'description', '_price', 1, 'country', 'growing_time', 'color')
 
 
 some_category = Category('home_apl', 'some goods for home', [soap, spoon, knife, brush])

@@ -13,6 +13,8 @@ class Product(MixingLog, SomeProduct):
         self.title = title
         self.description = description
         self.__price = _price
+        if quantity < 1:
+            raise ValueError('Недопустимое для количества значение')
         self.quantity = quantity
         self.color = color
         super().__init__()
