@@ -40,3 +40,11 @@ class Category:
     def __len__(self):
         self.length = len(self.__goods)
         return self.length
+
+    def middle_price(self, summ_of_prices=None):
+        for product in self.__goods:
+            summ_of_prices += product.get_price
+        try:
+            return summ_of_prices / len(self.__goods)
+        except ZeroDivisionError:
+            return 0
