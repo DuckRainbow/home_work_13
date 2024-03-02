@@ -30,6 +30,8 @@ class Category:
     def add_good(self, good):
         """ Add product in list """
         if isinstance(good, Product):
+            if good.quantity < 1:
+                raise ValueError('Недопустимое для количества значение')
             self.__goods.append(good)
         else:
             raise TypeError
